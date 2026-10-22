@@ -1,0 +1,71 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "xiaoxiang-translate",
+  "title": "小象翻译",
+  "description": "快捷翻译中英文单词和短语，支持音标、拼音、复制和英美发音。",
+  "icon": "xiaoxiang-icon.png",
+  "author": "woolson",
+  "license": "ISC",
+  "version": "1.1.0",
+  "private": true,
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Productivity"
+  ],
+  "commands": [
+    {
+      "name": "translate",
+      "title": "小象翻译",
+      "subtitle": "中英翻译",
+      "description": "查询中英文单词和短语；回车复制，⌥↵ 英式发音，⌘↵ 美式发音。",
+      "mode": "view",
+      "keywords": [
+        "xx",
+        "xiaoxiang",
+        "小象",
+        "翻译",
+        "translate"
+      ],
+      "arguments": [
+        {
+          "name": "query",
+          "type": "text",
+          "placeholder": "单词或短语（可选）",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "scripts": {
+    "build": "ray build -e dist -o dist",
+    "dev": "ray develop",
+    "lint": "eslint src tests && prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:live": "tsx scripts/smoke.ts",
+    "format": "prettier --write .",
+    "bundle": "node scripts/bundle.mjs"
+  },
+  "dependencies": {
+    "@raycast/api": "2.8.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "2.2.0",
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woolson/xiaoxiang-translate.git"
+  },
+  "homepage": "https://github.com/woolson/xiaoxiang-translate#readme",
+  "bugs": {
+    "url": "https://github.com/woolson/xiaoxiang-translate/issues"
+  }
+}
